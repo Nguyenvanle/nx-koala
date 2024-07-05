@@ -1,6 +1,4 @@
 package com.koala.backend.entity;
-
-import com.fasterxml.jackson.databind.DatabindException;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
