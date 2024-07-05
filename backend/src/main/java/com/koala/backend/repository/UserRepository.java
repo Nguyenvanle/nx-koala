@@ -1,6 +1,6 @@
-package com.devteria.identity_service.repository;
+package com.koala.backend.repository;
 
-import com.devteria.identity_service.entity.User;
+import com.koala.backend.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

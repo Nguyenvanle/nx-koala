@@ -1,11 +1,13 @@
-package com.devteria.identity_service;
+package com.koala.backend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class IdentityServiceApplication {
+public class BackendApplication {
+
 	public static void main(String[] args) {
-		SpringApplication.run(IdentityServiceApplication.class, args);
+		SpringApplication.run(BackendApplication.class, args);
 	}
+
 }

@@ -1,34 +1,22 @@
-package com.devteria.identity_service.controller;
+package com.koala.backend.controller;
 
-import com.devteria.identity_service.dto.request.UserCreationRequest;
-import com.devteria.identity_service.dto.request.UserUpdateRequest;
-import com.devteria.identity_service.entity.User;
-import com.devteria.identity_service.service.UserService;
+import com.koala.backend.dto.request.UserCreationRequest;
+import com.koala.backend.entity.User;
+import com.koala.backend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-
-@RestController
 @RequestMapping("/users")
+@RestController
 public class UserController {
-    @Autowired
-    private UserService userService;
+  @Autowired
+  UserService userService;
 
-    @PostMapping
-    User createUser(@RequestBody UserCreationRequest request) {
-        return userService.createUser(request);
-    }
-    @GetMapping
-    List<User> getUsers() {
-        return userService.getUsers();
-    }
-    @GetMapping("/{userId}")
-    User getUser(@PathVariable String userId) {
-        return userService.getUser(userId);
-    }
-    @PutMapping("/{userId}")
-    User updateUser(@PathVariable String userId, @RequestBody UserUpdateRequest request) {
-        return userService.updateUser(userId,request);
-    }
+  @PostMapping
+  User createUser(@RequestBody UserCreationRequest request) {
+    return userService.createUser(request);
+  }
 }
