@@ -20,4 +20,7 @@ public class UserService {
     user.setDob(request.getDob());
     return userRepository.save(user);
   }
+  public User getUser(String userId) {
+    return userRepository.findById(userId).orElseThrow();
+  }
 }
