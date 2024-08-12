@@ -9,6 +9,7 @@ import java.util.Date;
 
 @Data
 @Entity
+//this is class user
 public class User {
   @Id
   @GeneratedValue(strategy = GenerationType.UUID)
